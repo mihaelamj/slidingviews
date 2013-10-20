@@ -63,7 +63,6 @@
     if (standardColors) {
         NSInteger rndNo = RAND_FROM_TO(0,[standardColors count]-1);
         SEL colorSel = NSSelectorFromString(standardColors[rndNo]);
-        NSLog(@"Color:%@", standardColors[rndNo]);
         return [UIColor performSelector:colorSel];
     }
     return nil;
@@ -72,7 +71,6 @@
 + (UIColor *)colorFromName:(NSString *)colorName
 {
     SEL colorSel = NSSelectorFromString(colorName);
-    NSLog(@"Color:%@", colorName);
     return [UIColor performSelector:colorSel];
 }
 

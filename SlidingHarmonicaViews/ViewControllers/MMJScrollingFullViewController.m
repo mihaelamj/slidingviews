@@ -44,7 +44,7 @@
     for (int i = 0; i < self.noSubViews; i++) {
         CGRect frame = self.scrollView.frame;
         
-        //adding views to the bootom or to the right
+        //calculating view's frame : adding to the bootom or to the right
         if (self.isBottom) {
             frame.origin.x = frame.size.width * i;
             frame.origin.y = 0;
@@ -52,8 +52,14 @@
             frame.origin.x = 0;
             frame.origin.y = frame.size.height * i;;
         }
+        
+        //create view
         UIView *subview = [[UIView alloc] initWithFrame:frame];
+        
+        //add background color
         subview.backgroundColor = [self colorByNumber:i];
+        
+        //add it to scroll view
         [self.scrollView addSubview:subview];
     }
     
