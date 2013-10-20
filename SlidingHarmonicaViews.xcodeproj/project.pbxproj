@@ -1,0 +1,547 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A916F9D41812D50B00BE367E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A916F9D31812D50B00BE367E /* Foundation.framework */; };
+		A916F9D61812D50B00BE367E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A916F9D51812D50B00BE367E /* CoreGraphics.framework */; };
+		A916F9D81812D50B00BE367E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A916F9D71812D50B00BE367E /* UIKit.framework */; };
+		A916F9DE1812D50B00BE367E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A916F9DC1812D50B00BE367E /* InfoPlist.strings */; };
+		A916F9E01812D50B00BE367E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A916F9DF1812D50B00BE367E /* main.m */; };
+		A916F9E41812D50B00BE367E /* MMJAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A916F9E31812D50B00BE367E /* MMJAppDelegate.m */; };
+		A916F9E61812D50B00BE367E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A916F9E51812D50B00BE367E /* Images.xcassets */; };
+		A916F9ED1812D50B00BE367E /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A916F9EC1812D50B00BE367E /* XCTest.framework */; };
+		A916F9EE1812D50B00BE367E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A916F9D31812D50B00BE367E /* Foundation.framework */; };
+		A916F9EF1812D50B00BE367E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A916F9D71812D50B00BE367E /* UIKit.framework */; };
+		A916F9F71812D50B00BE367E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A916F9F51812D50B00BE367E /* InfoPlist.strings */; };
+		A916F9F91812D50B00BE367E /* SlidingHarmonicaViewsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A916F9F81812D50B00BE367E /* SlidingHarmonicaViewsTests.m */; };
+		A916FA041812D66600BE367E /* MMJScrollingFullViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A916FA031812D66600BE367E /* MMJScrollingFullViewController.m */; };
+		A916FA081812D69100BE367E /* MMJScrollingRightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A916FA071812D69100BE367E /* MMJScrollingRightViewController.m */; };
+		A916FA0B1812D6AB00BE367E /* MMJScrollingLeftAndRightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A916FA0A1812D6AB00BE367E /* MMJScrollingLeftAndRightViewController.m */; };
+		A916FA151812D8C300BE367E /* MMJSlidingChooserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A916FA141812D8C300BE367E /* MMJSlidingChooserViewController.m */; };
+		A916FA181812DBDA00BE367E /* MMJScrollingLeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A916FA171812DBDA00BE367E /* MMJScrollingLeftViewController.m */; };
+		A916FA1C1812E54D00BE367E /* MMJSlidingChooserNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A916FA1B1812E54D00BE367E /* MMJSlidingChooserNavigationController.m */; };
+		A916FA2A1812EDA000BE367E /* NSString+MethodList.m in Sources */ = {isa = PBXBuildFile; fileRef = A916FA271812EDA000BE367E /* NSString+MethodList.m */; };
+		A916FA2B1812EDA000BE367E /* UIColor+KECrayons.m in Sources */ = {isa = PBXBuildFile; fileRef = A916FA291812EDA000BE367E /* UIColor+KECrayons.m */; };
+		A916FA2F1812EE2D00BE367E /* UIColor+StandardColors.m in Sources */ = {isa = PBXBuildFile; fileRef = A916FA2E1812EE2D00BE367E /* UIColor+StandardColors.m */; };
+		A916FA351813119300BE367E /* MMJScrollingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A916FA341813119300BE367E /* MMJScrollingViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A916F9F01812D50B00BE367E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A916F9C81812D50B00BE367E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A916F9CF1812D50B00BE367E;
+			remoteInfo = SlidingHarmonicaViews;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A916F9D01812D50B00BE367E /* SlidingHarmonicaViews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlidingHarmonicaViews.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A916F9D31812D50B00BE367E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A916F9D51812D50B00BE367E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A916F9D71812D50B00BE367E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A916F9DB1812D50B00BE367E /* SlidingHarmonicaViews-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SlidingHarmonicaViews-Info.plist"; sourceTree = "<group>"; };
+		A916F9DD1812D50B00BE367E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A916F9DF1812D50B00BE367E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A916F9E11812D50B00BE367E /* SlidingHarmonicaViews-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SlidingHarmonicaViews-Prefix.pch"; sourceTree = "<group>"; };
+		A916F9E21812D50B00BE367E /* MMJAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMJAppDelegate.h; sourceTree = "<group>"; };
+		A916F9E31812D50B00BE367E /* MMJAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMJAppDelegate.m; sourceTree = "<group>"; };
+		A916F9E51812D50B00BE367E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A916F9EB1812D50B00BE367E /* SlidingHarmonicaViewsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SlidingHarmonicaViewsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A916F9EC1812D50B00BE367E /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		A916F9F41812D50B00BE367E /* SlidingHarmonicaViewsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SlidingHarmonicaViewsTests-Info.plist"; sourceTree = "<group>"; };
+		A916F9F61812D50B00BE367E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A916F9F81812D50B00BE367E /* SlidingHarmonicaViewsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SlidingHarmonicaViewsTests.m; sourceTree = "<group>"; };
+		A916FA021812D66600BE367E /* MMJScrollingFullViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MMJScrollingFullViewController.h; path = ViewControllers/MMJScrollingFullViewController.h; sourceTree = "<group>"; };
+		A916FA031812D66600BE367E /* MMJScrollingFullViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMJScrollingFullViewController.m; path = ViewControllers/MMJScrollingFullViewController.m; sourceTree = "<group>"; };
+		A916FA061812D69100BE367E /* MMJScrollingRightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MMJScrollingRightViewController.h; path = ViewControllers/MMJScrollingRightViewController.h; sourceTree = "<group>"; };
+		A916FA071812D69100BE367E /* MMJScrollingRightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMJScrollingRightViewController.m; path = ViewControllers/MMJScrollingRightViewController.m; sourceTree = "<group>"; };
+		A916FA091812D6AB00BE367E /* MMJScrollingLeftAndRightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MMJScrollingLeftAndRightViewController.h; path = ViewControllers/MMJScrollingLeftAndRightViewController.h; sourceTree = "<group>"; };
+		A916FA0A1812D6AB00BE367E /* MMJScrollingLeftAndRightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMJScrollingLeftAndRightViewController.m; path = ViewControllers/MMJScrollingLeftAndRightViewController.m; sourceTree = "<group>"; };
+		A916FA131812D8C300BE367E /* MMJSlidingChooserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MMJSlidingChooserViewController.h; path = ViewControllers/MMJSlidingChooserViewController.h; sourceTree = "<group>"; };
+		A916FA141812D8C300BE367E /* MMJSlidingChooserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMJSlidingChooserViewController.m; path = ViewControllers/MMJSlidingChooserViewController.m; sourceTree = "<group>"; };
+		A916FA161812DBDA00BE367E /* MMJScrollingLeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MMJScrollingLeftViewController.h; path = ViewControllers/MMJScrollingLeftViewController.h; sourceTree = "<group>"; };
+		A916FA171812DBDA00BE367E /* MMJScrollingLeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMJScrollingLeftViewController.m; path = ViewControllers/MMJScrollingLeftViewController.m; sourceTree = "<group>"; };
+		A916FA1A1812E54D00BE367E /* MMJSlidingChooserNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMJSlidingChooserNavigationController.h; sourceTree = "<group>"; };
+		A916FA1B1812E54D00BE367E /* MMJSlidingChooserNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMJSlidingChooserNavigationController.m; sourceTree = "<group>"; };
+		A916FA261812EDA000BE367E /* NSString+MethodList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+MethodList.h"; path = "Util/NSString+MethodList.h"; sourceTree = "<group>"; };
+		A916FA271812EDA000BE367E /* NSString+MethodList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+MethodList.m"; path = "Util/NSString+MethodList.m"; sourceTree = "<group>"; };
+		A916FA281812EDA000BE367E /* UIColor+KECrayons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+KECrayons.h"; path = "Util/UIColor+KECrayons.h"; sourceTree = "<group>"; };
+		A916FA291812EDA000BE367E /* UIColor+KECrayons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+KECrayons.m"; path = "Util/UIColor+KECrayons.m"; sourceTree = "<group>"; };
+		A916FA2D1812EE2D00BE367E /* UIColor+StandardColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+StandardColors.h"; path = "Util/UIColor+StandardColors.h"; sourceTree = "<group>"; };
+		A916FA2E1812EE2D00BE367E /* UIColor+StandardColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+StandardColors.m"; path = "Util/UIColor+StandardColors.m"; sourceTree = "<group>"; };
+		A916FA331813119300BE367E /* MMJScrollingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MMJScrollingViewController.h; path = ViewControllers/MMJScrollingViewController.h; sourceTree = "<group>"; };
+		A916FA341813119300BE367E /* MMJScrollingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMJScrollingViewController.m; path = ViewControllers/MMJScrollingViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A916F9CD1812D50B00BE367E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A916F9D61812D50B00BE367E /* CoreGraphics.framework in Frameworks */,
+				A916F9D81812D50B00BE367E /* UIKit.framework in Frameworks */,
+				A916F9D41812D50B00BE367E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A916F9E81812D50B00BE367E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A916F9ED1812D50B00BE367E /* XCTest.framework in Frameworks */,
+				A916F9EF1812D50B00BE367E /* UIKit.framework in Frameworks */,
+				A916F9EE1812D50B00BE367E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A916F9C71812D50B00BE367E = {
+			isa = PBXGroup;
+			children = (
+				A916F9D91812D50B00BE367E /* SlidingHarmonicaViews */,
+				A916F9F21812D50B00BE367E /* SlidingHarmonicaViewsTests */,
+				A916F9D21812D50B00BE367E /* Frameworks */,
+				A916F9D11812D50B00BE367E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A916F9D11812D50B00BE367E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A916F9D01812D50B00BE367E /* SlidingHarmonicaViews.app */,
+				A916F9EB1812D50B00BE367E /* SlidingHarmonicaViewsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A916F9D21812D50B00BE367E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A916F9D31812D50B00BE367E /* Foundation.framework */,
+				A916F9D51812D50B00BE367E /* CoreGraphics.framework */,
+				A916F9D71812D50B00BE367E /* UIKit.framework */,
+				A916F9EC1812D50B00BE367E /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A916F9D91812D50B00BE367E /* SlidingHarmonicaViews */ = {
+			isa = PBXGroup;
+			children = (
+				A916FA2C1812EDA500BE367E /* Util */,
+				A916FA1D1812E74600BE367E /* Navigation */,
+				A916FA051812D66E00BE367E /* ViewControllers */,
+				A916F9E21812D50B00BE367E /* MMJAppDelegate.h */,
+				A916F9E31812D50B00BE367E /* MMJAppDelegate.m */,
+				A916F9E51812D50B00BE367E /* Images.xcassets */,
+				A916F9DA1812D50B00BE367E /* Supporting Files */,
+			);
+			path = SlidingHarmonicaViews;
+			sourceTree = "<group>";
+		};
+		A916F9DA1812D50B00BE367E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A916F9DB1812D50B00BE367E /* SlidingHarmonicaViews-Info.plist */,
+				A916F9DC1812D50B00BE367E /* InfoPlist.strings */,
+				A916F9DF1812D50B00BE367E /* main.m */,
+				A916F9E11812D50B00BE367E /* SlidingHarmonicaViews-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A916F9F21812D50B00BE367E /* SlidingHarmonicaViewsTests */ = {
+			isa = PBXGroup;
+			children = (
+				A916F9F81812D50B00BE367E /* SlidingHarmonicaViewsTests.m */,
+				A916F9F31812D50B00BE367E /* Supporting Files */,
+			);
+			path = SlidingHarmonicaViewsTests;
+			sourceTree = "<group>";
+		};
+		A916F9F31812D50B00BE367E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A916F9F41812D50B00BE367E /* SlidingHarmonicaViewsTests-Info.plist */,
+				A916F9F51812D50B00BE367E /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A916FA051812D66E00BE367E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A916FA331813119300BE367E /* MMJScrollingViewController.h */,
+				A916FA341813119300BE367E /* MMJScrollingViewController.m */,
+				A916FA021812D66600BE367E /* MMJScrollingFullViewController.h */,
+				A916FA031812D66600BE367E /* MMJScrollingFullViewController.m */,
+				A916FA061812D69100BE367E /* MMJScrollingRightViewController.h */,
+				A916FA071812D69100BE367E /* MMJScrollingRightViewController.m */,
+				A916FA161812DBDA00BE367E /* MMJScrollingLeftViewController.h */,
+				A916FA171812DBDA00BE367E /* MMJScrollingLeftViewController.m */,
+				A916FA091812D6AB00BE367E /* MMJScrollingLeftAndRightViewController.h */,
+				A916FA0A1812D6AB00BE367E /* MMJScrollingLeftAndRightViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A916FA1D1812E74600BE367E /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				A916FA1A1812E54D00BE367E /* MMJSlidingChooserNavigationController.h */,
+				A916FA1B1812E54D00BE367E /* MMJSlidingChooserNavigationController.m */,
+				A916FA131812D8C300BE367E /* MMJSlidingChooserViewController.h */,
+				A916FA141812D8C300BE367E /* MMJSlidingChooserViewController.m */,
+			);
+			name = Navigation;
+			sourceTree = "<group>";
+		};
+		A916FA2C1812EDA500BE367E /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				A916FA261812EDA000BE367E /* NSString+MethodList.h */,
+				A916FA271812EDA000BE367E /* NSString+MethodList.m */,
+				A916FA281812EDA000BE367E /* UIColor+KECrayons.h */,
+				A916FA291812EDA000BE367E /* UIColor+KECrayons.m */,
+				A916FA2D1812EE2D00BE367E /* UIColor+StandardColors.h */,
+				A916FA2E1812EE2D00BE367E /* UIColor+StandardColors.m */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A916F9CF1812D50B00BE367E /* SlidingHarmonicaViews */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A916F9FC1812D50B00BE367E /* Build configuration list for PBXNativeTarget "SlidingHarmonicaViews" */;
+			buildPhases = (
+				A916F9CC1812D50B00BE367E /* Sources */,
+				A916F9CD1812D50B00BE367E /* Frameworks */,
+				A916F9CE1812D50B00BE367E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SlidingHarmonicaViews;
+			productName = SlidingHarmonicaViews;
+			productReference = A916F9D01812D50B00BE367E /* SlidingHarmonicaViews.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A916F9EA1812D50B00BE367E /* SlidingHarmonicaViewsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A916F9FF1812D50B00BE367E /* Build configuration list for PBXNativeTarget "SlidingHarmonicaViewsTests" */;
+			buildPhases = (
+				A916F9E71812D50B00BE367E /* Sources */,
+				A916F9E81812D50B00BE367E /* Frameworks */,
+				A916F9E91812D50B00BE367E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A916F9F11812D50B00BE367E /* PBXTargetDependency */,
+			);
+			name = SlidingHarmonicaViewsTests;
+			productName = SlidingHarmonicaViewsTests;
+			productReference = A916F9EB1812D50B00BE367E /* SlidingHarmonicaViewsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A916F9C81812D50B00BE367E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = MMJ;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Token d.o.o.";
+				TargetAttributes = {
+					A916F9EA1812D50B00BE367E = {
+						TestTargetID = A916F9CF1812D50B00BE367E;
+					};
+				};
+			};
+			buildConfigurationList = A916F9CB1812D50B00BE367E /* Build configuration list for PBXProject "SlidingHarmonicaViews" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A916F9C71812D50B00BE367E;
+			productRefGroup = A916F9D11812D50B00BE367E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A916F9CF1812D50B00BE367E /* SlidingHarmonicaViews */,
+				A916F9EA1812D50B00BE367E /* SlidingHarmonicaViewsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A916F9CE1812D50B00BE367E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A916F9DE1812D50B00BE367E /* InfoPlist.strings in Resources */,
+				A916F9E61812D50B00BE367E /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A916F9E91812D50B00BE367E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A916F9F71812D50B00BE367E /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A916F9CC1812D50B00BE367E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A916FA181812DBDA00BE367E /* MMJScrollingLeftViewController.m in Sources */,
+				A916FA2A1812EDA000BE367E /* NSString+MethodList.m in Sources */,
+				A916F9E01812D50B00BE367E /* main.m in Sources */,
+				A916F9E41812D50B00BE367E /* MMJAppDelegate.m in Sources */,
+				A916FA151812D8C300BE367E /* MMJSlidingChooserViewController.m in Sources */,
+				A916FA2B1812EDA000BE367E /* UIColor+KECrayons.m in Sources */,
+				A916FA081812D69100BE367E /* MMJScrollingRightViewController.m in Sources */,
+				A916FA351813119300BE367E /* MMJScrollingViewController.m in Sources */,
+				A916FA0B1812D6AB00BE367E /* MMJScrollingLeftAndRightViewController.m in Sources */,
+				A916FA2F1812EE2D00BE367E /* UIColor+StandardColors.m in Sources */,
+				A916FA041812D66600BE367E /* MMJScrollingFullViewController.m in Sources */,
+				A916FA1C1812E54D00BE367E /* MMJSlidingChooserNavigationController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A916F9E71812D50B00BE367E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A916F9F91812D50B00BE367E /* SlidingHarmonicaViewsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A916F9F11812D50B00BE367E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A916F9CF1812D50B00BE367E /* SlidingHarmonicaViews */;
+			targetProxy = A916F9F01812D50B00BE367E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A916F9DC1812D50B00BE367E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A916F9DD1812D50B00BE367E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A916F9F51812D50B00BE367E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A916F9F61812D50B00BE367E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A916F9FA1812D50B00BE367E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos6.1;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		A916F9FB1812D50B00BE367E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos6.1;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A916F9FD1812D50B00BE367E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SlidingHarmonicaViews/SlidingHarmonicaViews-Prefix.pch";
+				INFOPLIST_FILE = "SlidingHarmonicaViews/SlidingHarmonicaViews-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A916F9FE1812D50B00BE367E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SlidingHarmonicaViews/SlidingHarmonicaViews-Prefix.pch";
+				INFOPLIST_FILE = "SlidingHarmonicaViews/SlidingHarmonicaViews-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		A916FA001812D50B00BE367E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SlidingHarmonicaViews.app/SlidingHarmonicaViews";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SlidingHarmonicaViews/SlidingHarmonicaViews-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "SlidingHarmonicaViewsTests/SlidingHarmonicaViewsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		A916FA011812D50B00BE367E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SlidingHarmonicaViews.app/SlidingHarmonicaViews";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SlidingHarmonicaViews/SlidingHarmonicaViews-Prefix.pch";
+				INFOPLIST_FILE = "SlidingHarmonicaViewsTests/SlidingHarmonicaViewsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A916F9CB1812D50B00BE367E /* Build configuration list for PBXProject "SlidingHarmonicaViews" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A916F9FA1812D50B00BE367E /* Debug */,
+				A916F9FB1812D50B00BE367E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A916F9FC1812D50B00BE367E /* Build configuration list for PBXNativeTarget "SlidingHarmonicaViews" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A916F9FD1812D50B00BE367E /* Debug */,
+				A916F9FE1812D50B00BE367E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A916F9FF1812D50B00BE367E /* Build configuration list for PBXNativeTarget "SlidingHarmonicaViewsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A916FA001812D50B00BE367E /* Debug */,
+				A916FA011812D50B00BE367E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A916F9C81812D50B00BE367E /* Project object */;
+}
