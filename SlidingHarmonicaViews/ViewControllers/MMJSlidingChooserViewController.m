@@ -13,7 +13,6 @@
 #import "MMJScrollingLeftViewController.h"
 #import "MMJScrollingLeftAndRightViewController.h"
 
-#import "UIColor+StandardColors.h"
 
 @interface MMJSlidingChooserViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) UITableView *tableView;
@@ -39,30 +38,8 @@
     
     //set title
     self.title = @"Sliding Views";
-    
-    [self addBarButtons];
 }
 
-
-#pragma mark - Testing
-
-- (void)addBarButtons
-{
-    self.navigationItem.leftBarButtonItem = [UIBarButtonItem.alloc initWithTitle:@"Colors" style:UIBarButtonItemStylePlain target:self action:@selector(colorList)];
-    self.navigationItem.rightBarButtonItem = [UIBarButtonItem.alloc initWithTitle:@"RndColor" style:UIBarButtonItemStylePlain target:self action:@selector(randomColor)];
-}
-
-- (void)colorList
-{
-    NSArray *standardColors = [UIColor standardColorNames];
-    NSLog(@"standard colors\n%@", standardColors);
-}
-
-- (void)randomColor
-{
-    UIColor *rndColor = [UIColor randomStandardColor];
-    self.tableView.backgroundColor = rndColor;
-}
 
 #pragma mark - Helpers
 
