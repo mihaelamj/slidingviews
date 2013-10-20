@@ -11,7 +11,7 @@
 #import "UIColor+StandardColors.h"
 
 @interface MMJScrollingViewController ()
-
+@property (nonatomic, strong) NSArray *colorNames;
 @end
 
 @implementation MMJScrollingViewController
@@ -43,8 +43,8 @@
 
 - (UIColor *)colorByNumber:(int)number
 {
-    //TODO: change to index colors
-    return [UIColor randomStandardColor];
+//    return [UIColor randomStandardColor];
+    return [UIColor colorFromName:[self.colorNames objectAtIndex:(number % [self.colorNames count])]];
 }
 
 
@@ -80,6 +80,15 @@
         _noSubViews = noSubViews;
         [self reCreateViews];
     }
+}
+
+- (NSArray *)colorNames
+{
+    if (!_colorNames) {
+        _colorNames = [UIColor standardColorNamesExcludingColors:@[@"clearColor", @"blackColor",@"whiteColor"]];
+        //remove black, white and clear color
+    }
+    return _colorNames;
 }
 
 

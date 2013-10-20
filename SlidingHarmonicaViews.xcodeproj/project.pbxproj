@@ -29,6 +29,7 @@
 		A916FA2B1812EDA000BE367E /* UIColor+KECrayons.m in Sources */ = {isa = PBXBuildFile; fileRef = A916FA291812EDA000BE367E /* UIColor+KECrayons.m */; };
 		A916FA2F1812EE2D00BE367E /* UIColor+StandardColors.m in Sources */ = {isa = PBXBuildFile; fileRef = A916FA2E1812EE2D00BE367E /* UIColor+StandardColors.m */; };
 		A916FA351813119300BE367E /* MMJScrollingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A916FA341813119300BE367E /* MMJScrollingViewController.m */; };
+		A955F6A11813DB7A00C79196 /* NSArray+StringHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A955F6A01813DB7A00C79196 /* NSArray+StringHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,8 @@
 		A916FA2E1812EE2D00BE367E /* UIColor+StandardColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+StandardColors.m"; path = "Util/UIColor+StandardColors.m"; sourceTree = "<group>"; };
 		A916FA331813119300BE367E /* MMJScrollingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MMJScrollingViewController.h; path = ViewControllers/MMJScrollingViewController.h; sourceTree = "<group>"; };
 		A916FA341813119300BE367E /* MMJScrollingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMJScrollingViewController.m; path = ViewControllers/MMJScrollingViewController.m; sourceTree = "<group>"; };
+		A955F69F1813DB7A00C79196 /* NSArray+StringHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+StringHelper.h"; path = "Util/NSArray+StringHelper.h"; sourceTree = "<group>"; };
+		A955F6A01813DB7A00C79196 /* NSArray+StringHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+StringHelper.m"; path = "Util/NSArray+StringHelper.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +211,8 @@
 		A916FA2C1812EDA500BE367E /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				A955F69F1813DB7A00C79196 /* NSArray+StringHelper.h */,
+				A955F6A01813DB7A00C79196 /* NSArray+StringHelper.m */,
 				A916FA261812EDA000BE367E /* NSString+MethodList.h */,
 				A916FA271812EDA000BE367E /* NSString+MethodList.m */,
 				A916FA281812EDA000BE367E /* UIColor+KECrayons.h */,
@@ -315,6 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A916FA181812DBDA00BE367E /* MMJScrollingLeftViewController.m in Sources */,
+				A955F6A11813DB7A00C79196 /* NSArray+StringHelper.m in Sources */,
 				A916FA2A1812EDA000BE367E /* NSString+MethodList.m in Sources */,
 				A916F9E01812D50B00BE367E /* main.m in Sources */,
 				A916F9E41812D50B00BE367E /* MMJAppDelegate.m in Sources */,

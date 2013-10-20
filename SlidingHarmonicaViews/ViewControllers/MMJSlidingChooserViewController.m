@@ -18,6 +18,7 @@
 @interface MMJSlidingChooserViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSArray *controllers;
+
 @end
 
 #define SLIDERS_CELL_ID @"cliders_cell"
@@ -116,6 +117,7 @@
     }
     return _controllers;
 }
+
 
 #pragma mark - TableView Data Source
 

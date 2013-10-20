@@ -11,6 +11,7 @@
 
 #import "UIColor+StandardColors.h"
 #import "NSString+MethodList.h"
+#import "NSArray+StringHelper.h"
 
 @implementation UIColor (StandardColors)
 
@@ -41,6 +42,21 @@
     return  colors;
 }
 
++ (NSArray *)standardColorNamesExcludingColors:(NSArray *)excludingColors
+{
+    NSArray *goodColors = [UIColor standardColorNames];
+    if (excludingColors) {
+        //remove excludingColors from result
+        goodColors = [goodColors filteredArrayUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(id colorName, NSDictionary *bindings)
+        {
+            NSString *colorNameStr = (NSString *)colorName;
+            BOOL isExcludingColor = [excludingColors containsAString:colorNameStr];
+            return (!isExcludingColor);
+        }]];
+    }
+    return goodColors;
+}
+
 + (UIColor *)randomStandardColor
 {
     NSArray *standardColors = [self standardColorNames];
@@ -51,6 +67,13 @@
         return [UIColor performSelector:colorSel];
     }
     return nil;
+}
+
++ (UIColor *)colorFromName:(NSString *)colorName
+{
+    SEL colorSel = NSSelectorFromString(colorName);
+    NSLog(@"Color:%@", colorName);
+    return [UIColor performSelector:colorSel];
 }
 
 @end

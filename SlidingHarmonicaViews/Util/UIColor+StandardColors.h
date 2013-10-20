@@ -12,5 +12,6 @@
 
 + (NSArray *)standardColorNames;
 + (UIColor *)randomStandardColor;
-
++ (NSArray *)standardColorNamesExcludingColors:(NSArray *)excludingColors;
++ (UIColor *)colorFromName:(NSString *)colorName;
 @end
