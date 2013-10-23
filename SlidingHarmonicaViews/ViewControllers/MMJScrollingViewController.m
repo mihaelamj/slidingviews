@@ -14,6 +14,8 @@
 @property (nonatomic, strong) NSArray *colorNames;
 @end
 
+#define DEFAULT_SUBVIEWS_NO 10
+
 @implementation MMJScrollingViewController
 
 @synthesize noSubViews = _noSubViews;
@@ -65,8 +67,6 @@
 }
 
 #pragma maks - Properties
-
-#define DEFAULT_SUBVIEWS_NO 10
 
 - (int)noSubViews
 {

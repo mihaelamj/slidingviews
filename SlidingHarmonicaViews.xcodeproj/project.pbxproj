@@ -30,6 +30,7 @@
 		A916FA2F1812EE2D00BE367E /* UIColor+StandardColors.m in Sources */ = {isa = PBXBuildFile; fileRef = A916FA2E1812EE2D00BE367E /* UIColor+StandardColors.m */; };
 		A916FA351813119300BE367E /* MMJScrollingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A916FA341813119300BE367E /* MMJScrollingViewController.m */; };
 		A94AF152181763FD00F589C6 /* MMJScrollingGestureCenterdVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A94AF151181763FD00F589C6 /* MMJScrollingGestureCenterdVC.m */; };
+		A94AF155181767F000F589C6 /* MMJScrollingRightOffsetVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A94AF154181767F000F589C6 /* MMJScrollingRightOffsetVC.m */; };
 		A955F6A11813DB7A00C79196 /* NSArray+StringHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A955F6A01813DB7A00C79196 /* NSArray+StringHelper.m */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +83,8 @@
 		A916FA341813119300BE367E /* MMJScrollingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMJScrollingViewController.m; path = ViewControllers/MMJScrollingViewController.m; sourceTree = "<group>"; };
 		A94AF150181763FD00F589C6 /* MMJScrollingGestureCenterdVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MMJScrollingGestureCenterdVC.h; path = ViewControllers/MMJScrollingGestureCenterdVC.h; sourceTree = "<group>"; };
 		A94AF151181763FD00F589C6 /* MMJScrollingGestureCenterdVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMJScrollingGestureCenterdVC.m; path = ViewControllers/MMJScrollingGestureCenterdVC.m; sourceTree = "<group>"; };
+		A94AF153181767F000F589C6 /* MMJScrollingRightOffsetVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MMJScrollingRightOffsetVC.h; path = ViewControllers/MMJScrollingRightOffsetVC.h; sourceTree = "<group>"; };
+		A94AF154181767F000F589C6 /* MMJScrollingRightOffsetVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMJScrollingRightOffsetVC.m; path = ViewControllers/MMJScrollingRightOffsetVC.m; sourceTree = "<group>"; };
 		A955F69F1813DB7A00C79196 /* NSArray+StringHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+StringHelper.h"; path = "Util/NSArray+StringHelper.h"; sourceTree = "<group>"; };
 		A955F6A01813DB7A00C79196 /* NSArray+StringHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+StringHelper.m"; path = "Util/NSArray+StringHelper.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -194,6 +197,8 @@
 				A94AF151181763FD00F589C6 /* MMJScrollingGestureCenterdVC.m */,
 				A916FA061812D69100BE367E /* MMJScrollingRightViewController.h */,
 				A916FA071812D69100BE367E /* MMJScrollingRightViewController.m */,
+				A94AF153181767F000F589C6 /* MMJScrollingRightOffsetVC.h */,
+				A94AF154181767F000F589C6 /* MMJScrollingRightOffsetVC.m */,
 				A916FA161812DBDA00BE367E /* MMJScrollingLeftViewController.h */,
 				A916FA171812DBDA00BE367E /* MMJScrollingLeftViewController.m */,
 				A916FA091812D6AB00BE367E /* MMJScrollingLeftAndRightViewController.h */,
@@ -326,6 +331,7 @@
 			files = (
 				A916FA181812DBDA00BE367E /* MMJScrollingLeftViewController.m in Sources */,
 				A955F6A11813DB7A00C79196 /* NSArray+StringHelper.m in Sources */,
+				A94AF155181767F000F589C6 /* MMJScrollingRightOffsetVC.m in Sources */,
 				A916FA2A1812EDA000BE367E /* NSString+MethodList.m in Sources */,
 				A94AF152181763FD00F589C6 /* MMJScrollingGestureCenterdVC.m in Sources */,
 				A916F9E01812D50B00BE367E /* main.m in Sources */,

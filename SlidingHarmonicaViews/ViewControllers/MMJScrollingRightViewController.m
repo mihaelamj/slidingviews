@@ -56,6 +56,8 @@
     self.scrollView.contentSize = scrollSize;
 }
 
+#pragma mark - Handle tap
+
 - (void)handleTapGesture:(UIGestureRecognizer *)sender
 {
     NSLog(@"view tapped");
