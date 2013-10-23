@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "MMJScrollingViewController.h"
+#import "MMJScrollingGestureCenterdVC.h"
 
-@interface MMJScrollingRightViewController : MMJScrollingViewController
+@interface MMJScrollingRightViewController : MMJScrollingGestureCenterdVC
 
 @end
