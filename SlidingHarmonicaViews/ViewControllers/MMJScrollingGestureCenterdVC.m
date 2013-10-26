@@ -32,7 +32,7 @@
  *  @param view view to add a middle view to
  */
 
-- (void)addMiddleViewToView:(UIView *)view
+- (void)addMiddleViewToView:(UIView *)view index:(int)index
 {
     //add middle view to view
     UIView *middleView = [[UIView alloc] initWithFrame:CGRectZero];
@@ -41,7 +41,17 @@
     
     //position it in the middle of view
     middleView.frame = CGRectMake(0, 0, view.frame.size.width / 6, view.frame.size.height);
+    
+    UILabel *label = [[UILabel alloc] initWithFrame:middleView.frame];
+    label.backgroundColor = [UIColor clearColor];
+    label.text = [NSString stringWithFormat:@"%d", index];
+    label.textColor = [UIColor whiteColor];
+    
     middleView.center = CGPointMake(view.frame.size.width / 2, middleView.center.y);
+    
+
+    
+    [middleView addSubview:label];
 }
 
 /**
@@ -75,7 +85,7 @@
     view.tag = index;
     
     //create middle view
-    [self addMiddleViewToView:view];
+    [self addMiddleViewToView:view index:index];
     
     //add gesture reckognizer to view
     [self addGestureReckogizerToView:view selector:gestureSelector];

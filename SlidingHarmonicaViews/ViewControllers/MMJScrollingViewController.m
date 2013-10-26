@@ -14,7 +14,7 @@
 @property (nonatomic, strong) NSArray *colorNames;
 @end
 
-#define DEFAULT_SUBVIEWS_NO 10
+#define DEFAULT_SUBVIEWS_NO 15
 #define USE_DEFAULT_COLORS YES
 
 @implementation MMJScrollingViewController
