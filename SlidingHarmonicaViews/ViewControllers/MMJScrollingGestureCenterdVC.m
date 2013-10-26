@@ -19,6 +19,13 @@
 
 #pragma mark - Creating view
 
+
+/**
+ *  Adds view in the middle of a given view
+ *
+ *  @param view view to add a middle view to
+ */
+
 - (void)addMiddleViewToView:(UIView *)view
 {
     //add middle view to view
@@ -31,12 +38,29 @@
     middleView.center = CGPointMake(view.frame.size.width / 2, middleView.center.y);
 }
 
+/**
+ *  Adds a gesture reckognizer to a given view
+ *
+ *  @param view     view to add a gesture reckognizer to
+ *  @param selector selector to perfomt for a gesture
+ */
+
 - (void)addGestureReckogizerToView:(UIView *)view selector:(SEL)selector
 {
     UITapGestureRecognizer *viewTap=[[UITapGestureRecognizer alloc] initWithTarget:self action:selector];
     viewTap.numberOfTapsRequired=1;
     [view addGestureRecognizer:viewTap];
 }
+
+/**
+ *  Makes view with a given frame, index, and selector for a geture reckognizer
+ *
+ *  @param frame           frame for view
+ *  @param index           view's index in superview
+ *  @param gestureSelector selector for gesture reckognizer
+ *
+ *  @return returns the created view
+ */
 
 - (UIView *)makeViewWithFrame:(CGRect)frame index:(int)index gestureSelector:(SEL)gestureSelector
 {

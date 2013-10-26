@@ -10,8 +10,8 @@
 
 #import "MMJScrollingFullViewController.h"
 #import "MMJScrollingRightViewController.h"
-#import "MMJScrollingLeftViewController.h"
-#import "MMJScrollingLeftAndRightViewController.h"
+
+#import "MMJScrollingRightOffsetVC.h"
 
 
 @interface MMJSlidingChooserViewController ()<UITableViewDataSource, UITableViewDelegate>
@@ -89,8 +89,7 @@
         // add dictionary for each controller holding controller objects with respective description
         _controllers = @[@{CONT_NAME : @"whole rect", CONT_OBJ : [[MMJScrollingFullViewController alloc] init]},
                          @{CONT_NAME : @"scrolling right", CONT_OBJ : [[MMJScrollingRightViewController alloc] init]},
-                         @{CONT_NAME : @"scrolling left", CONT_OBJ : [[MMJScrollingLeftViewController alloc] init]},
-                         @{CONT_NAME : @"scrolling left & right", CONT_OBJ : [[MMJScrollingLeftAndRightViewController alloc] init]}];
+                         @{CONT_NAME : @"scrolling right offset", CONT_OBJ : [[MMJScrollingRightOffsetVC alloc] init]}];
     }
     return _controllers;
 }

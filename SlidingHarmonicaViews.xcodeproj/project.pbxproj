@@ -21,9 +21,7 @@
 		A916F9F91812D50B00BE367E /* SlidingHarmonicaViewsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A916F9F81812D50B00BE367E /* SlidingHarmonicaViewsTests.m */; };
 		A916FA041812D66600BE367E /* MMJScrollingFullViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A916FA031812D66600BE367E /* MMJScrollingFullViewController.m */; };
 		A916FA081812D69100BE367E /* MMJScrollingRightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A916FA071812D69100BE367E /* MMJScrollingRightViewController.m */; };
-		A916FA0B1812D6AB00BE367E /* MMJScrollingLeftAndRightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A916FA0A1812D6AB00BE367E /* MMJScrollingLeftAndRightViewController.m */; };
 		A916FA151812D8C300BE367E /* MMJSlidingChooserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A916FA141812D8C300BE367E /* MMJSlidingChooserViewController.m */; };
-		A916FA181812DBDA00BE367E /* MMJScrollingLeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A916FA171812DBDA00BE367E /* MMJScrollingLeftViewController.m */; };
 		A916FA1C1812E54D00BE367E /* MMJSlidingChooserNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A916FA1B1812E54D00BE367E /* MMJSlidingChooserNavigationController.m */; };
 		A916FA2A1812EDA000BE367E /* NSString+MethodList.m in Sources */ = {isa = PBXBuildFile; fileRef = A916FA271812EDA000BE367E /* NSString+MethodList.m */; };
 		A916FA2B1812EDA000BE367E /* UIColor+KECrayons.m in Sources */ = {isa = PBXBuildFile; fileRef = A916FA291812EDA000BE367E /* UIColor+KECrayons.m */; };
@@ -65,12 +63,8 @@
 		A916FA031812D66600BE367E /* MMJScrollingFullViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMJScrollingFullViewController.m; path = ViewControllers/MMJScrollingFullViewController.m; sourceTree = "<group>"; };
 		A916FA061812D69100BE367E /* MMJScrollingRightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MMJScrollingRightViewController.h; path = ViewControllers/MMJScrollingRightViewController.h; sourceTree = "<group>"; };
 		A916FA071812D69100BE367E /* MMJScrollingRightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMJScrollingRightViewController.m; path = ViewControllers/MMJScrollingRightViewController.m; sourceTree = "<group>"; };
-		A916FA091812D6AB00BE367E /* MMJScrollingLeftAndRightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MMJScrollingLeftAndRightViewController.h; path = ViewControllers/MMJScrollingLeftAndRightViewController.h; sourceTree = "<group>"; };
-		A916FA0A1812D6AB00BE367E /* MMJScrollingLeftAndRightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMJScrollingLeftAndRightViewController.m; path = ViewControllers/MMJScrollingLeftAndRightViewController.m; sourceTree = "<group>"; };
 		A916FA131812D8C300BE367E /* MMJSlidingChooserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MMJSlidingChooserViewController.h; path = ViewControllers/MMJSlidingChooserViewController.h; sourceTree = "<group>"; };
 		A916FA141812D8C300BE367E /* MMJSlidingChooserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMJSlidingChooserViewController.m; path = ViewControllers/MMJSlidingChooserViewController.m; sourceTree = "<group>"; };
-		A916FA161812DBDA00BE367E /* MMJScrollingLeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MMJScrollingLeftViewController.h; path = ViewControllers/MMJScrollingLeftViewController.h; sourceTree = "<group>"; };
-		A916FA171812DBDA00BE367E /* MMJScrollingLeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMJScrollingLeftViewController.m; path = ViewControllers/MMJScrollingLeftViewController.m; sourceTree = "<group>"; };
 		A916FA1A1812E54D00BE367E /* MMJSlidingChooserNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMJSlidingChooserNavigationController.h; sourceTree = "<group>"; };
 		A916FA1B1812E54D00BE367E /* MMJSlidingChooserNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMJSlidingChooserNavigationController.m; sourceTree = "<group>"; };
 		A916FA261812EDA000BE367E /* NSString+MethodList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+MethodList.h"; path = "Util/NSString+MethodList.h"; sourceTree = "<group>"; };
@@ -199,10 +193,6 @@
 				A916FA071812D69100BE367E /* MMJScrollingRightViewController.m */,
 				A94AF153181767F000F589C6 /* MMJScrollingRightOffsetVC.h */,
 				A94AF154181767F000F589C6 /* MMJScrollingRightOffsetVC.m */,
-				A916FA161812DBDA00BE367E /* MMJScrollingLeftViewController.h */,
-				A916FA171812DBDA00BE367E /* MMJScrollingLeftViewController.m */,
-				A916FA091812D6AB00BE367E /* MMJScrollingLeftAndRightViewController.h */,
-				A916FA0A1812D6AB00BE367E /* MMJScrollingLeftAndRightViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -329,7 +319,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A916FA181812DBDA00BE367E /* MMJScrollingLeftViewController.m in Sources */,
 				A955F6A11813DB7A00C79196 /* NSArray+StringHelper.m in Sources */,
 				A94AF155181767F000F589C6 /* MMJScrollingRightOffsetVC.m in Sources */,
 				A916FA2A1812EDA000BE367E /* NSString+MethodList.m in Sources */,
@@ -340,7 +329,6 @@
 				A916FA2B1812EDA000BE367E /* UIColor+KECrayons.m in Sources */,
 				A916FA081812D69100BE367E /* MMJScrollingRightViewController.m in Sources */,
 				A916FA351813119300BE367E /* MMJScrollingViewController.m in Sources */,
-				A916FA0B1812D6AB00BE367E /* MMJScrollingLeftAndRightViewController.m in Sources */,
 				A916FA2F1812EE2D00BE367E /* UIColor+StandardColors.m in Sources */,
 				A916FA041812D66600BE367E /* MMJScrollingFullViewController.m in Sources */,
 				A916FA1C1812E54D00BE367E /* MMJSlidingChooserNavigationController.m in Sources */,
