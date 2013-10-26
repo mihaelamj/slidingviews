@@ -14,8 +14,14 @@
 
 @implementation MMJScrollingGestureCenterdVC
 
-#define DEFAULT_CLOSED_WID 100
-#define DEFAULT_OPEN_WID 250
+//need to synthesize because declaring bith getters and setters
+@synthesize viewWidth = _viewWidth;
+@synthesize leftOffset = _leftOffset;
+@synthesize rigthOffset = _rigthOffset;
+
+#define VIEW_WIDTH 150
+#define LEFT_OFFSET 50
+#define RIGHT_OFFSET 50
 
 #pragma mark - Creating view
 
@@ -53,7 +59,7 @@
 }
 
 /**
- *  Makes view with a given frame, index, and selector for a geture reckognizer
+ *  Makes view with a given frame, index, and selector for a geture reckognizer, used in (void)addSubViews
  *
  *  @param frame           frame for view
  *  @param index           view's index in superview
@@ -64,8 +70,9 @@
 
 - (UIView *)makeViewWithFrame:(CGRect)frame index:(int)index gestureSelector:(SEL)gestureSelector
 {
-    //create view
+    //create view and add index as a tag
     UIView *view = [[UIView alloc] initWithFrame:frame];
+    view.tag = index;
     
     //create middle view
     [self addMiddleViewToView:view];
@@ -73,19 +80,60 @@
     //add gesture reckognizer to view
     [self addGestureReckogizerToView:view selector:gestureSelector];
     
+    //add color to the view
+    view.backgroundColor = [self colorByNumber:index];
+    
     return view;
 }
 
 #pragma mark - Properties
 
-- (int)closedWidth
+- (int)viewWidth
 {
-    return (0 == _closedWidth) ? DEFAULT_CLOSED_WID : _closedWidth;
+    return (0 == _viewWidth) ? VIEW_WIDTH : _viewWidth;
 }
 
-- (int)openWidth
+- (int)leftOffset
 {
-    return (0 == _openWidth) ? DEFAULT_OPEN_WID : _closedWidth;
+    return (0 == _leftOffset) ? LEFT_OFFSET : _leftOffset;
 }
+
+- (int)rigthOffset
+{
+    return (0 == _rigthOffset) ? RIGHT_OFFSET : _rigthOffset;
+}
+
+- (void)setViewWidth:(int)viewWidth
+{
+    if (_viewWidth != viewWidth) {
+        _viewWidth = viewWidth;
+        //re-create subviews
+        [self reCreateViews];
+    }
+}
+
+- (void)setLeftOffset:(int)leftOffset
+{
+    if (_leftOffset != leftOffset) {
+        _leftOffset = leftOffset;
+        //re-create subviews
+        [self reCreateViews];
+    }
+}
+
+- (void)setRigthOffset:(int)rigthOffset
+{
+    if (_rigthOffset != rigthOffset) {
+        _rigthOffset = rigthOffset;
+        //re-create subviews
+        [self reCreateViews];
+    }
+}
+
+- (int)middleViewMidth
+{
+    return self.viewWidth - (self.leftOffset + self.rigthOffset);
+}
+
 
 @end

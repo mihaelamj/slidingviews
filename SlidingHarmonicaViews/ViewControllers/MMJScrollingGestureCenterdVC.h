@@ -10,8 +10,10 @@
 
 @interface MMJScrollingGestureCenterdVC : MMJScrollingViewController
 
-@property (nonatomic) int closedWidth;
-@property (nonatomic) int openWidth;
+@property (nonatomic) int viewWidth;
+@property (nonatomic) int leftOffset;
+@property (nonatomic) int rigthOffset;
+@property (nonatomic, readonly) int middleViewMidth;
 
 - (UIView *)makeViewWithFrame:(CGRect)frame index:(int)index gestureSelector:(SEL)gestureSelector;
 

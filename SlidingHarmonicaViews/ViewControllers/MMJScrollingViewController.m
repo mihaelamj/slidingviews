@@ -35,6 +35,10 @@
     [self addSubViews];
 }
 
+#pragma mark - Abstract
+/**
+ *  Abstract methods that need overriding in descendant classes
+ */
 - (void)addSubViews
 {
     return;

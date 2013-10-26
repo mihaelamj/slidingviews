@@ -22,23 +22,17 @@
     
     for (int i = 0; i < self.noSubViews; i++) {
         
-        //calculate view's frame
+        //make frame for each sub view
         CGRect frame = CGRectZero;
-        
         //view is high as the scroll view
         frame.size.height = self.scrollView.frame.size.height;
-        
         //view's width is open width
-        frame.size.width = self.openWidth;
-        
+        frame.size.width = self.viewWidth;
         //move right by open width
-        frame.origin.x = i * (self.openWidth);
+        frame.origin.x = i * (self.viewWidth);
         
         //make view
         UIView *view = [self makeViewWithFrame:frame index:i gestureSelector:@selector(handleTapGesture:)];
-        
-        //add background color
-        view.backgroundColor = [self colorByNumber:i];
         
         //add it to scroll view
         [self.scrollView addSubview:view];
@@ -56,7 +50,7 @@
     self.scrollView.contentSize = scrollSize;
 }
 
-#pragma mark - Handle tap
+#pragma mark - Handle tap gesture
 
 - (void)handleTapGesture:(UIGestureRecognizer *)sender
 {
