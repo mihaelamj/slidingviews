@@ -15,6 +15,7 @@
 @end
 
 #define DEFAULT_SUBVIEWS_NO 10
+#define USE_DEFAULT_COLORS YES
 
 @implementation MMJScrollingViewController
 
@@ -46,6 +47,11 @@
 
 
 #pragma mark - Helpers
+
++ (NSArray *)defaultColors
+{
+    return @[@"floraColor", @"lavenderColor", @"skyColor", @"strawberryColor", @"bananaColor", @"aquaColor", @"bubblegumColor", @"fernColor", @"maraschinoColor", @"iceColor", @"maroonColor", @"mossColor", @"midnightColor", @"aluminumColor", @"cantaloupeColor"];
+}
 
 - (UIColor *)colorByNumber:(int)number
 {
@@ -89,8 +95,12 @@
 - (NSArray *)colorNames
 {
     if (!_colorNames) {
-        _colorNames = [UIColor standardColorNamesExcludingColors:@[@"clearColor", @"blackColor",@"whiteColor"]];
-        //remove black, white and clear color
+        if (USE_DEFAULT_COLORS) {
+            _colorNames = [MMJScrollingViewController defaultColors];
+        } else {
+            _colorNames = [UIColor standardColorNamesExcludingColors:@[@"clearColor", @"blackColor",@"whiteColor",@"aluminumColor",@"asparagusColor",@"blueberryColor",@"cantaloupeColor",@"carnationColor",@"fernColor",@"floraColor",@"grapeColor",@"honeydewColor",@"iceColor",@"leadColor",@"licoriceColor",@"magnesiumColor"]];
+            //remove black, white and clear color
+        }
     }
     return _colorNames;
 }

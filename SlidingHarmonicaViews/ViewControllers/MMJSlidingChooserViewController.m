@@ -8,9 +8,9 @@
 
 #import "MMJSlidingChooserViewController.h"
 
+#import "MMJColorsViewController.h"
 #import "MMJScrollingFullViewController.h"
 #import "MMJScrollingRightViewController.h"
-
 #import "MMJScrollingRightOffsetVC.h"
 
 
@@ -86,8 +86,9 @@
 - (NSArray *)controllers //array of dictionary of array
 {
     if (!_controllers) {
-        // add dictionary for each controller holding controller objects with respective description
-        _controllers = @[@{CONT_NAME : @"whole rect", CONT_OBJ : [[MMJScrollingFullViewController alloc] init]},
+        // add dictionary for each controller holding controller objects with respective description MMJColorsViewController
+        _controllers = @[@{CONT_NAME : @"standard colors", CONT_OBJ : [[MMJColorsViewController alloc] init]},
+                         @{CONT_NAME : @"whole rect", CONT_OBJ : [[MMJScrollingFullViewController alloc] init]},
                          @{CONT_NAME : @"scrolling right", CONT_OBJ : [[MMJScrollingRightViewController alloc] init]},
                          @{CONT_NAME : @"scrolling right offset", CONT_OBJ : [[MMJScrollingRightOffsetVC alloc] init]}];
     }
