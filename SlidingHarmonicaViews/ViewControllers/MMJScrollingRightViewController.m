@@ -54,7 +54,7 @@
 
 - (void)handleTapGesture:(UIGestureRecognizer *)sender
 {
-    NSLog(@"view tapped");
+    NSLog(@"view %d tapped", sender.view.tag);
 }
 
 

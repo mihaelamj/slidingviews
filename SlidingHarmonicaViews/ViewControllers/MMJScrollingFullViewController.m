@@ -20,6 +20,8 @@
 #define TITLE_BOTTOM @"Bottom"
 #define TITLE_RIGHT @"Right"
 
+#pragma mark - Helpers
+
 - (void)addBarButtons
 {
     self.navigationItem.rightBarButtonItem = [UIBarButtonItem.alloc initWithTitle:TITLE_RIGHT style:UIBarButtonItemStylePlain target:self action:@selector(bottomOnOff)];

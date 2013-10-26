@@ -7,6 +7,7 @@
 //
 
 #import "MMJScrollingGestureCenterdVC.h"
+#import "UIColor+KECrayons.h"
 
 @interface MMJScrollingGestureCenterdVC ()
 
@@ -14,7 +15,7 @@
 
 @implementation MMJScrollingGestureCenterdVC
 
-//need to synthesize because declaring bith getters and setters
+//need to synthesize these properties because we are declaring both getters and setters
 @synthesize viewWidth = _viewWidth;
 @synthesize leftOffset = _leftOffset;
 @synthesize rigthOffset = _rigthOffset;
@@ -24,7 +25,6 @@
 #define RIGHT_OFFSET 50
 
 #pragma mark - Creating view
-
 
 /**
  *  Adds view in the middle of a given view
@@ -37,30 +37,28 @@
     //add middle view to view
     UIView *middleView = [[UIView alloc] initWithFrame:CGRectZero];
     [view addSubview:middleView];
-    middleView.backgroundColor = [UIColor blackColor];
+    middleView.backgroundColor = [UIColor tungstenColor];
     
     //position it in the middle of view
     middleView.frame = CGRectMake(0, 0, view.frame.size.width / 6, view.frame.size.height);
     
+    //add label to middle view to know view's index in the subview
     UILabel *label = [[UILabel alloc] initWithFrame:middleView.frame];
     label.backgroundColor = [UIColor clearColor];
     label.text = [NSString stringWithFormat:@"%d", index];
     label.textColor = [UIColor whiteColor];
     
+    //need to add the label before changing the view's center, because it changes the view's frame
     middleView.center = CGPointMake(view.frame.size.width / 2, middleView.center.y);
-    
-
-    
     [middleView addSubview:label];
 }
 
 /**
- *  Adds a gesture reckognizer to a given view
+ *  Adds a gesture recognizer to a given view
  *
- *  @param view     view to add a gesture reckognizer to
+ *  @param view     view to add a gesture recognizer to
  *  @param selector selector to perfomt for a gesture
  */
-
 - (void)addGestureReckogizerToView:(UIView *)view selector:(SEL)selector
 {
     UITapGestureRecognizer *viewTap=[[UITapGestureRecognizer alloc] initWithTarget:self action:selector];
@@ -69,15 +67,14 @@
 }
 
 /**
- *  Makes view with a given frame, index, and selector for a geture reckognizer, used in (void)addSubViews
+ *  Makes view with a given frame, index, and selector for a geture recognizer, used in addSubViews
  *
  *  @param frame           frame for view
  *  @param index           view's index in superview
- *  @param gestureSelector selector for gesture reckognizer
+ *  @param gestureSelector selector for gesture recognizer
  *
  *  @return returns the created view
  */
-
 - (UIView *)makeViewWithFrame:(CGRect)frame index:(int)index gestureSelector:(SEL)gestureSelector
 {
     //create view and add index as a tag
@@ -87,7 +84,7 @@
     //create middle view
     [self addMiddleViewToView:view index:index];
     
-    //add gesture reckognizer to view
+    //add gesture recognizer to view
     [self addGestureReckogizerToView:view selector:gestureSelector];
     
     //add color to the view

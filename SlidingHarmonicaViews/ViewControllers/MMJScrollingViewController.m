@@ -59,12 +59,11 @@
     return [UIColor colorFromName:[self.colorNames objectAtIndex:(number % [self.colorNames count])]];
 }
 
-
 - (void)removeAllSubViewsFromScrollView
 {
     //remove all UIView descendands from scroll view
     for (id subView in [self.scrollView subviews]) {
-        //scroll view has image subvies that for scrolling indicators
+        //scroll view has image subvies that are used as scrolling indicators
         if ([subView isKindOfClass:[UIView class]])
             [subView removeFromSuperview];
     }
@@ -98,7 +97,7 @@
         if (USE_DEFAULT_COLORS) {
             _colorNames = [MMJScrollingViewController defaultColors];
         } else {
-            _colorNames = [UIColor standardColorNamesExcludingColors:@[@"clearColor", @"blackColor",@"whiteColor",@"aluminumColor",@"asparagusColor",@"blueberryColor",@"cantaloupeColor",@"carnationColor",@"fernColor",@"floraColor",@"grapeColor",@"honeydewColor",@"iceColor",@"leadColor",@"licoriceColor",@"magnesiumColor"]];
+            _colorNames = [UIColor standardColorNamesExcludingColors:@[@"clearColor", @"blackColor",@"whiteColor"]];
             //remove black, white and clear color
         }
     }
