@@ -81,7 +81,6 @@
 {
     if (_bottom !=bottom) {
         _bottom = bottom;
-        
         [self reCreateViews];
     }
     

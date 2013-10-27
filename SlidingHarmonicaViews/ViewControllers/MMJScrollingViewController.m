@@ -36,6 +36,15 @@
     [self addSubViews];
 }
 
+#pragma mark - Orientation
+
+- (void)adjustViewFrame:(CGRect)frame
+{
+    [self.view setFrame:frame];
+    [self.scrollView setFrame:frame];
+    [self reCreateViews];
+}
+
 #pragma mark - Abstract
 /**
  *  Abstract methods that need overriding in descendant classes
@@ -44,7 +53,6 @@
 {
     return;
 }
-
 
 #pragma mark - Helpers
 

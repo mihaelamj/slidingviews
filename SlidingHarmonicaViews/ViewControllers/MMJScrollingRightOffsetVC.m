@@ -84,7 +84,7 @@
             }
             
             subViewFrame = subview.frame;
-            //declare animation block
+            //declare view sizing/positioning block
             void (^viewTransformBlock)(void) = ^{
                 //setting the bounds
                 subview.bounds = subViewBounds;
@@ -131,8 +131,7 @@
 
 - (void)handleMyTapGesture:(UIGestureRecognizer *)sender
 {
-    NSLog(@"view %d tapped", sender.view.tag);
-//    [self positionViewsWithTappedViewAnimated:sender.view inScrollView:self.scrollView];
+//    NSLog(@"view %d tapped", sender.view.tag);
     [self positionViewsWithTappedView:sender.view inScrollView:self.scrollView animated:NO];
     
     [self showTappedView:sender.view];
