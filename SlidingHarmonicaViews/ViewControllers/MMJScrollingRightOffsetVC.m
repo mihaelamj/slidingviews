@@ -67,7 +67,7 @@
             //set view frame
             subview.frame = subViewFrame;
             
-            NSLog(@"AFTER subview %d Frame: %@, Bounds: %@", subview.tag, NSStringFromCGRect(subview.frame), NSStringFromCGRect(subview.bounds));
+//            NSLog(@"AFTER subview %d Frame: %@, Bounds: %@", subview.tag, NSStringFromCGRect(subview.frame), NSStringFromCGRect(subview.bounds));
             //calculate next views offset
             lastX += subViewFrame.size.width;
         }
@@ -80,12 +80,12 @@
 {
     CGRect viewFrame = view.frame;
     CGPoint viewCenter = CGPointMake(CGRectGetMidX(viewFrame), 0);
-    //find center of the viwe and move scroll frame /2 to the left
+    //find center of the view and move  by scroll frame /2 to the left
     viewCenter.x -= (self.scrollView.frame.size.width/2);
-    //no gap to the left
+    //fix gap to the left
     if (viewCenter.x < 0)
         viewCenter.x = 0;
-    //no gap to the right
+    //fix gap to the right
     int contentXEnd = viewCenter.x + self.scrollView.frame.size.width;
     if (contentXEnd > self.scrollView.contentSize.width)
         viewCenter.x -= (contentXEnd - self.scrollView.contentSize.width);
@@ -101,62 +101,16 @@
      ];
 }
 
-- (void)positionViewsWithTappedViewAnimatedPlain:(UIView *)tappedView inScrollView:(UIScrollView *)scrollView
+- (void)positionViewsWithTappedView:(UIView *)tappedView inScrollView:(UIScrollView *)scrollView animated:(BOOL)animated
 {
     //init local vars
     int lastX = 0;
-    
-    for (UIView *subview in [scrollView subviews]) {
-        //skip over non UIView classes (Scrollbar image Views) and those with no tag
-        if ([subview isKindOfClass:[UIView class]] && (subview.tag)) {
-            
-            CGRect subViewFrame = subview.frame;
-            CGRect subViewBounds = CGRectZero;
-            
-            if ([subview isEqual:tappedView]) {
-                //expand tapped view bounds to full size
-                subViewBounds = [self subViewBoundsFull];
-            } else {
-                //restrict non-tapped view bounds to middle size
-                subViewBounds = [self subViewBoundsMiddle];
-            }
-            
-            [UIView beginAnimations:nil context:nil];
-            [UIView setAnimationDuration:0.5];
-            [UIView setAnimationDelay:0.05];
-            [UIView setAnimationCurve:UIViewAnimationCurveEaseOut];
-            
-            //setting the bounds
-            subview.bounds = subViewBounds;
-            //move the origin
-            subViewFrame.origin.x = lastX;
-            //set the frame width
-            subViewFrame.size.width = subViewBounds.size.width;
-            //set view frame
-            subview.frame = subViewFrame;
-            
-            [UIView commitAnimations];
-            
-            NSLog(@"AFTER subview %d Frame: %@, Bounds: %@", subview.tag, NSStringFromCGRect(subview.frame), NSStringFromCGRect(subview.bounds));
-            //calculate next views offset
-            lastX += subViewFrame.size.width;
-        }
-    }
-    //calculate content size with added views
-    self.scrollView.contentSize = CGSizeMake(lastX, self.scrollView.contentSize.height);
-}
+    __block CGRect subViewFrame = CGRectZero;
+    CGRect subViewBounds = CGRectZero;
 
-- (void)positionViewsWithTappedViewAnimated:(UIView *)tappedView inScrollView:(UIScrollView *)scrollView
-{
-    //init local vars
-    int lastX = 0;
-    
     for (UIView *subview in [scrollView subviews]) {
         //skip over non UIView classes (Scrollbar image Views) and those with no tag
         if ([subview isKindOfClass:[UIView class]] && (subview.tag)) {
-            
-            __block CGRect subViewFrame = subview.frame;
-            CGRect subViewBounds = CGRectZero;
             
             if ([subview isEqual:tappedView]) {
                 //expand tapped view bounds to full size
@@ -166,25 +120,31 @@
                 subViewBounds = [self subViewBoundsMiddle];
             }
             
-            [UIView animateWithDuration:0.6 delay:0.01 options: UIViewAnimationCurveLinear |
-             UIViewAnimationOptionCurveEaseInOut
-                             animations:^{
-                                 //setting the bounds
-                                 subview.bounds = subViewBounds;
-                                 //move the origin
-                                 subViewFrame.origin.x = lastX;
-                                 //set the frame width
-                                 subViewFrame.size.width = subViewBounds.size.width;
-                                 //set view frame
-                                 subview.frame = subViewFrame;
-                             }
-                             completion:^(BOOL finished) {
-//                                 NSLog(@"Done!");
-                             }
-             ];
+            subViewFrame = subview.frame;
             
+            //declare animation block
+            void (^viewTransformBlock)(void) = ^{
+                //setting the bounds
+                subview.bounds = subViewBounds;
+                //move the origin
+                subViewFrame.origin.x = lastX;
+                //set the frame width
+                subViewFrame.size.width = subViewBounds.size.width;
+                //set view frame
+                subview.frame = subViewFrame;
+            };
+
+            if (animated) {
+                [UIView animateWithDuration:0.6 delay:0.01 options: UIViewAnimationCurveLinear |
+                 UIViewAnimationOptionCurveEaseInOut
+                                 animations:viewTransformBlock
+                                 completion:^(BOOL finished) {}
+                 ];
+            } else {
+                viewTransformBlock(); //do not forget the parthenses!!!!!!!!
+            }
             
-            NSLog(@"AFTER subview %d Frame: %@, Bounds: %@", subview.tag, NSStringFromCGRect(subview.frame), NSStringFromCGRect(subview.bounds));
+//            NSLog(@"AFTER subview %d Frame: %@, Bounds: %@", subview.tag, NSStringFromCGRect(subview.frame), NSStringFromCGRect(subview.bounds));
             //calculate next views offset
             lastX += subViewFrame.size.width;
         }
@@ -197,7 +157,6 @@
 
 - (void)addSubViews
 {
-    
     for (int i = 0; i < self.noSubViews; i++) {
         CGRect frame = [self subViewRectToTheLeft:i];
         UIView *view = [self makeViewWithFrame:frame index:i gestureSelector:@selector(handleMyTapGesture:)];
@@ -211,7 +170,9 @@
 - (void)handleMyTapGesture:(UIGestureRecognizer *)sender
 {
     NSLog(@"view %d tapped", sender.view.tag);
-    [self positionViewsWithTappedViewAnimated:sender.view inScrollView:self.scrollView];
+//    [self positionViewsWithTappedViewAnimated:sender.view inScrollView:self.scrollView];
+    [self positionViewsWithTappedView:sender.view inScrollView:self.scrollView animated:NO];
+    
     [self showTappedView:sender.view];
 }
 
