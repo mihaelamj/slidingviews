@@ -13,7 +13,7 @@
 @property (nonatomic) int viewWidth;
 @property (nonatomic) int leftOffset;
 @property (nonatomic) int rigthOffset;
-@property (nonatomic, readonly) int middleViewMidth;
+@property (nonatomic, readonly) int middleViewWidth;
 
 - (UIView *)makeViewWithFrame:(CGRect)frame index:(int)index gestureSelector:(SEL)gestureSelector;
 

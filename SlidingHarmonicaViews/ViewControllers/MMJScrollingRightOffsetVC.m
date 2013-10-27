@@ -14,33 +14,91 @@
 
 @implementation MMJScrollingRightOffsetVC
 
+#pragma mark - Positioning
+
+- (CGRect)subViewRectToTheLeft:(int)index
+{
+    //set full width
+    CGRect viewFrame = CGRectMake(0, 0, self.viewWidth, self.scrollView.frame.size.height);
+    //move origin to the left by middle width
+    viewFrame.origin.x = (index - 1) * self.middleViewWidth;
+    return viewFrame;
+}
+
+- (CGRect)subViewBoundsMiddle
+{
+    //restrict bounds just to the middle part
+    return CGRectMake(self.leftOffset, 0, self.middleViewWidth, self.scrollView.frame.size.height);
+}
+
+- (CGRect)subViewBoundsFull
+{
+    return CGRectMake(0, 0, self.viewWidth, self.scrollView.frame.size.height);
+}
+
+- (void)openTappedView:(UIView *)tappedView inScrollView:(UIScrollView *)scrollView
+{
+    //init local vars
+    int lastX = 0;
+    
+    for (UIView *subview in [scrollView subviews]) {
+        //skip over non UIView classes (Scrollbar image Views) and those with no tag
+        if ([subview isKindOfClass:[UIView class]] && (subview.tag)) {
+            
+            CGRect subViewFrame = subview.frame;
+            CGRect subViewBounds = CGRectZero;
+            
+            if ([subview isEqual:tappedView]) {
+                //expand tapped view bounds to full size
+                subViewBounds = [self subViewBoundsFull];
+            } else {
+                //restrict non-tapped view bounds to middle size
+                subViewBounds = [self subViewBoundsMiddle];
+            }
+            
+            //setting the bounds
+            subview.bounds = subViewBounds;
+            
+            //move the origin
+            subViewFrame.origin.x = lastX;
+            //set the frame width
+            subViewFrame.size.width = subViewBounds.size.width;
+            //set view frame
+            subview.frame = subViewFrame;
+            
+            //calculate next views offset
+            lastX += subViewFrame.size.width;
+            
+            NSLog(@"AFTER subview %d Frame: %@, Bounds: %@", subview.tag, NSStringFromCGRect(subview.frame), NSStringFromCGRect(subview.bounds));
+        }
+    }
+    
+    //calculate content size with added views
+    CGSize scrollSize = CGSizeZero;
+    scrollSize.width = lastX;
+    scrollSize.height = self.scrollView.contentSize.height;
+    //adjust scroll view's content size
+    self.scrollView.contentSize = scrollSize;
+}
+
 #pragma mark - Overrides
 
 - (void)addSubViews
 {
-    //make frame for each sub view
-    CGRect frame = CGRectZero;
-    //view is high as the scroll view
-    frame.size.height = self.scrollView.frame.size.height;
-    frame.size.width = self.viewWidth;
     //needed to calculate scroll view's content size
     int lastX = 0;
     
     for (int i = 0; i < self.noSubViews; i++) {
-        NSLog(@"view : %d", i);
-        //move subview to the right by offset
-        frame.origin.x = (i - 1) * self.middleViewMidth;
-        NSLog(@"frame : %@", NSStringFromCGRect(frame));
         
+        //move subview to the left by offset
+        CGRect frame = [self subViewRectToTheLeft:i];
         //make view
         UIView *view = [self makeViewWithFrame:frame index:i gestureSelector:@selector(handleMyTapGesture:)];
         
-        //restrict drawing of view to center rect with bounds
-        CGRect viewBounds = CGRectMake(0, 0, self.middleViewMidth, frame.size.height);
-        //move origin by left offset
-        viewBounds.origin.x = self.leftOffset;
+        //make bounds restricting to the middle
+        CGRect viewBounds = [self subViewBoundsMiddle];
         view.bounds = viewBounds;
-        NSLog(@"bounts : %@", NSStringFromCGRect(viewBounds));
+        NSLog(@"view : %d, frame : %@, bounds : %@", i, NSStringFromCGRect(frame), NSStringFromCGRect(viewBounds));
         
         //add it to scroll view
         [self.scrollView addSubview:view];
@@ -62,52 +120,7 @@
 - (void)handleMyTapGesture:(UIGestureRecognizer *)sender
 {
     NSLog(@"view %d tapped", sender.view.tag);
-    [self openTappedViewRight:sender.view inScrollView:self.scrollView];
-}
-
-#pragma mark - Helpers
-
-- (void)openTappedViewRight:(UIView *)tappedView inScrollView:(UIScrollView *)scrollView
-{
-    //init local vars
-    int lastX = 0;
-    CGRect frame = CGRectZero;
-    
-    for (UIView *subview in [scrollView subviews]) {
-        //skip over non UIView classes (Scrollbar image Views)
-        if ([subview isKindOfClass:[UIView class]]) {
-            frame = subview.frame;
-            NSLog(@"subview Frame: %@, Bounds: %@", NSStringFromCGRect(subview.frame), NSStringFromCGRect(subview.bounds));
-            
-            int boundsWidth;
-            int boundsOrigin;
-            
-            //expand tapped view bounds to full size
-            if ([subview isEqual:tappedView]) {
-                boundsWidth = self.viewWidth;
-                boundsOrigin = 0;
-                lastX -= self.leftOffset;
-            } else {
-                //shrinks other (non tapped view's) bounds to smaller size
-                boundsWidth = self.middleViewMidth;
-                //set the bounds offset to left offset
-                boundsOrigin = self.leftOffset;
-            }
-            
-            //setting the bounds
-            CGRect viewBounds = CGRectMake(0, 0, boundsWidth, subview.frame.size.height);
-            viewBounds.origin.x = boundsOrigin;
-            subview.bounds = viewBounds;
-            frame.size.width = boundsWidth;
-            
-            frame.origin.x = lastX;
-            subview.frame = frame;
-            
-            //calculate next views offset
-            lastX += frame.size.width;
-        }
-    }
-
+    [self openTappedView:sender.view inScrollView:self.scrollView];
 }
 
 @end

@@ -45,7 +45,7 @@
     //add label to middle view to know view's index in the subview
     UILabel *label = [[UILabel alloc] initWithFrame:middleView.frame];
     label.backgroundColor = [UIColor clearColor];
-    label.text = [NSString stringWithFormat:@"%d", index];
+    label.text = [NSString stringWithFormat:@"%d", view.tag];
     label.textColor = [UIColor whiteColor];
     
     //need to add the label before changing the view's center, because it changes the view's frame
@@ -79,7 +79,7 @@
 {
     //create view and add index as a tag
     UIView *view = [[UIView alloc] initWithFrame:frame];
-    view.tag = index;
+    view.tag = index + 1;
     
     //create middle view
     [self addMiddleViewToView:view index:index];
@@ -137,7 +137,7 @@
     }
 }
 
-- (int)middleViewMidth
+- (int)middleViewWidth
 {
     return self.viewWidth - (self.leftOffset + self.rigthOffset);
 }
