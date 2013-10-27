@@ -37,7 +37,7 @@
     return CGRectMake(0, 0, self.viewWidth, self.scrollView.frame.size.height);
 }
 
-- (void)openTappedView:(UIView *)tappedView inScrollView:(UIScrollView *)scrollView
+- (void)positionViewsWithTappedView:(UIView *)tappedView inScrollView:(UIScrollView *)scrollView
 {
     //init local vars
     int lastX = 0;
@@ -76,7 +76,32 @@
     self.scrollView.contentSize = CGSizeMake(lastX, self.scrollView.contentSize.height);
 }
 
-- (void)openTappedViewAnimated:(UIView *)tappedView inScrollView:(UIScrollView *)scrollView
+- (void)showTappedView:(UIView *)view
+{
+    CGRect viewFrame = view.frame;
+    CGPoint viewCenter = CGPointMake(CGRectGetMidX(viewFrame), 0);
+    //find center of the viwe and move scroll frame /2 to the left
+    viewCenter.x -= (self.scrollView.frame.size.width/2);
+    //no gap to the left
+    if (viewCenter.x < 0)
+        viewCenter.x = 0;
+    //no gap to the right
+    int contentXEnd = viewCenter.x + self.scrollView.frame.size.width;
+    if (contentXEnd > self.scrollView.contentSize.width)
+        viewCenter.x -= (contentXEnd - self.scrollView.contentSize.width);
+    
+    [UIView animateWithDuration:0.6 delay:0.01 options: UIViewAnimationCurveLinear |
+     UIViewAnimationOptionCurveEaseInOut
+                     animations:^{
+                         [self.scrollView setContentOffset:viewCenter animated:NO];
+                     }
+                     completion:^(BOOL finished) {
+                         //NSLog(@"Done!");
+                     }
+     ];
+}
+
+- (void)positionViewsWithTappedViewAnimatedPlain:(UIView *)tappedView inScrollView:(UIScrollView *)scrollView
 {
     //init local vars
     int lastX = 0;
@@ -121,7 +146,7 @@
     self.scrollView.contentSize = CGSizeMake(lastX, self.scrollView.contentSize.height);
 }
 
-- (void)openTappedViewAnimatedWithBlock:(UIView *)tappedView inScrollView:(UIScrollView *)scrollView
+- (void)positionViewsWithTappedViewAnimated:(UIView *)tappedView inScrollView:(UIScrollView *)scrollView
 {
     //init local vars
     int lastX = 0;
@@ -170,36 +195,6 @@
 
 #pragma mark - Overrides
 
-//- (void)addSubViews
-//{
-//    //needed to calculate scroll view's content size
-//    int lastX = 0;
-//    
-//    for (int i = 0; i < self.noSubViews; i++) {
-//        
-//        //move subview to the left by offset
-//        CGRect frame = [self subViewRectToTheLeft:i];
-//        //make view
-//        UIView *view = [self makeViewWithFrame:frame index:i gestureSelector:@selector(handleMyTapGesture:)];
-//        
-//        //make bounds restricting to the middle
-//        CGRect viewBounds = [self subViewBoundsMiddle];
-//        view.bounds = viewBounds;
-//        NSLog(@"view : %d, frame : %@, bounds : %@", i, NSStringFromCGRect(frame), NSStringFromCGRect(viewBounds));
-//        
-//        //add it to scroll view
-//        [self.scrollView addSubview:view];
-//        
-//        //increase by bounds width
-//        lastX += view.bounds.size.width;
-////        lastX += self.middleViewWidth;
-//    }
-//    //calculate content size with added views
-//    self.scrollView.contentSize = CGSizeMake(lastX, self.scrollView.contentSize.height);
-//    
-//    [self openTappedViewAnimatedWithBlock:nil inScrollView:self.scrollView];
-//}
-
 - (void)addSubViews
 {
     
@@ -208,7 +203,7 @@
         UIView *view = [self makeViewWithFrame:frame index:i gestureSelector:@selector(handleMyTapGesture:)];
         [self.scrollView addSubview:view];
     }
-    [self openTappedView:nil inScrollView:self.scrollView];
+    [self positionViewsWithTappedView:nil inScrollView:self.scrollView];
 }
 
 #pragma mark - Handle tap gesture
@@ -216,7 +211,8 @@
 - (void)handleMyTapGesture:(UIGestureRecognizer *)sender
 {
     NSLog(@"view %d tapped", sender.view.tag);
-    [self openTappedViewAnimatedWithBlock:sender.view inScrollView:self.scrollView];
+    [self positionViewsWithTappedViewAnimated:sender.view inScrollView:self.scrollView];
+    [self showTappedView:sender.view];
 }
 
 @end
