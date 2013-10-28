@@ -27,7 +27,7 @@
 {
     [super viewDidLoad];
 	
-    //add svroll view
+    //add scroll view
     self.scrollView = [[UIScrollView alloc] initWithFrame:self.view.frame];
     [self.view addSubview:self.scrollView];
     [self.scrollView setScrollEnabled:TRUE];

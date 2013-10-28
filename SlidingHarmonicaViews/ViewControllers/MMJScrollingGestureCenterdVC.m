@@ -20,9 +20,9 @@
 @synthesize leftOffset = _leftOffset;
 @synthesize rigthOffset = _rigthOffset;
 
-#define VIEW_WIDTH 200
-#define LEFT_OFFSET 50
-#define RIGHT_OFFSET 50
+#define VIEW_WIDTH 120
+#define LEFT_OFFSET 40
+#define RIGHT_OFFSET 40
 
 #pragma mark - Creating view
 

@@ -37,7 +37,7 @@
         //add it to scroll view
         [self.scrollView addSubview:view];
         
-        //increase by closed width
+        //increase by bounds width
         lastX += view.bounds.size.width;
     }
     

@@ -132,7 +132,7 @@
 - (void)handleMyTapGesture:(UIGestureRecognizer *)sender
 {
 //    NSLog(@"view %d tapped", sender.view.tag);
-    [self positionViewsWithTappedView:sender.view inScrollView:self.scrollView animated:NO];
+    [self positionViewsWithTappedView:sender.view inScrollView:self.scrollView animated:YES];
     
     [self showTappedView:sender.view];
 }
