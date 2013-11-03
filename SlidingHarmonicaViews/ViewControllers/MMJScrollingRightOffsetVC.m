@@ -124,7 +124,7 @@
         UIView *view = [self makeViewWithFrame:frame index:i gestureSelector:@selector(handleMyTapGesture:)];
         [self.scrollView addSubview:view];
     }
-    [self positionViewsWithTappedView:nil inScrollView:self.scrollView animated:NO];
+    [self positionViewsWithTappedView:nil inScrollView:self.scrollView animated:YES];
 }
 
 #pragma mark - Handle tap gesture
